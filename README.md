@@ -1,5 +1,11 @@
 # Klima App
 
+## Demostración
+Aquí puedes ver la aplicación en acción, haciendo click en la imagen.
+
+
+[![Ver Video](https://github.com/user-attachments/assets/135ce32d-0b96-44ad-870c-2f28ada7fad7)](https://www.loom.com/share/2ba67fc904274402bbe69d04bb9b775e?sid=5fd506f2-2a55-4726-a7e2-2cb2cca41e53)
+
 ## Descripción
 
 Clima es una aplicación web desarrollada en **ReactJS** utilizando **ViteJS** y **TanStack** para la gestión de estados. La aplicación permite a los usuarios obtener el clima actual de su ubicación local a través del navegador, buscar información climática de localidades específicas y agregar ciudades a una lista de favoritos.
