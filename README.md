@@ -1,50 +1,75 @@
-# React + TypeScript + Vite
+# Klima App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Descripción
 
-Currently, two official plugins are available:
+Clima es una aplicación web desarrollada en **ReactJS** utilizando **ViteJS** y **TanStack** para la gestión de estados. La aplicación permite a los usuarios obtener el clima actual de su ubicación local a través del navegador, buscar información climática de localidades específicas y agregar ciudades a una lista de favoritos.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## URL de Producción
 
-## Expanding the ESLint configuration
+La aplicación está disponible en producción en la siguiente URL: [https://klima-beige.vercel.app](https://klima-beige.vercel.app). Puedes acceder a esta dirección para probar todas las funcionalidades de la aplicación en tiempo real.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Tecnologías Utilizadas
 
-- Configure the top-level `parserOptions` property like this:
+- **ReactJS**: Biblioteca de JavaScript para construir interfaces de usuario.
+- **ViteJS**: Herramienta de construcción rápida para aplicaciones modernas.
+- **TanStack Query**: Librería para la gestión del estado y la sincronización de datos con APIs.
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+## Funcionalidades
+
+1. **Ubicación Local**:
+
+   - La aplicación solicita al usuario permiso para acceder a su ubicación actual mediante la API de geolocalización del navegador.
+   - Muestra el clima actual basado en la ubicación obtenida.
+
+2. **Búsqueda de Localidades**:
+
+   - Permite a los usuarios buscar información climática de cualquier ciudad ingresando su nombre.
+   - Realiza peticiones a la API de OpenWeather para obtener datos meteorológicos.
+
+3. **Favoritos**:
+   - Los usuarios pueden agregar ciudades a una lista de favoritos para un acceso rápido en el futuro.
+   - La lista se almacena en el estado local utilizando TanStack Query, lo que facilita la gestión y persistencia de datos.
+
+## Instalación
+
+Para instalar y ejecutar la aplicación, sigue estos pasos:
+
+1. Clona este repositorio:
+   ```bash
+   git clone https://github.com/tu_usuario/clima-app.git
+   cd clima-app
+   ```
+2. Clona este repositorio:
+   ```bash
+   npm install
+   ```
+3. Clona este repositorio:
+   ```bash
+   npm run dev
+   ```
+4. Abre tu navegador y visita http://localhost:3000 para ver la aplicación en acción.
+
+## Estructura del Proyecto
+
+La estructura del proyecto Clima App es la siguiente:
+
+```plaintext
+clima-app/
+├── public/
+├── src/
+│   ├── components/
+│   ├── hooks/
+│   ├── pages/
+│   ├── App.jsx
+│   └── index.jsx
+├── package.json
+└── vite.config.js
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+## Contribuciones
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+Las contribuciones son bienvenidas. Si deseas mejorar esta aplicación, por favor abre un issue o envía un pull request.
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+## Licencia
+
+Este proyecto está bajo la Licencia MIT. Para más detalles, consulta el archivo LICENSE.
